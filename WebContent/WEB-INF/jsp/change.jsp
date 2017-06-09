@@ -48,7 +48,7 @@ td {
 
 
 
-<input type="submit" value="変更"> <input type="reset" value="削除">
+<input type="submit" value="取り消し"> <input type="reset" value="決定">
 
 
 </body>

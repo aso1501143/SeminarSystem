@@ -24,7 +24,7 @@
 		<input type="submit" value="ログイン"> <input type="reset" value="リセット">
 	</form>
 	<br>
-	<a href="/asoshop/NewUser">新規登録はこちら</a>
+
 </body>
 </html>
 
