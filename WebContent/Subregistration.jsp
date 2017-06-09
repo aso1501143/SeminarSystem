@@ -14,8 +14,10 @@
 	　　
 		<table>
 	　　　	　　<tr>
+				<tr align="center">
 			<td>教科</td>
 			<td><input type="text" name="subject"></td>
+
 		　　</tr>
 		　　<tr>
 			<td>科目名</td>
