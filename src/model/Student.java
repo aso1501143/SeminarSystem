@@ -6,7 +6,7 @@ public class Student implements Serializable {
 	//変数
 	private int studentid;
 	private String studentname = "";
-	private int passwd;
+	private String passwd;
 	private String classname = "";
 	
 	//デフォルトコンストラクタ
@@ -29,12 +29,12 @@ public class Student implements Serializable {
 		this.studentname = studentname;
 	}
 
-	public int getPasswd() {
+	public String getPasswd() {
 		return passwd;
 	}
 
-	public void setPasswd(int passwd) {
-		this.passwd = passwd;
+	public void setPasswd(String string) {
+		this.passwd = string;
 	}
 
 	public String getClassname() {

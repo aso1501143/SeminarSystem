@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.StudentDao;
 import dao.UserDao;
+import model.Student;
 import model.User;
 
 /**
@@ -43,22 +45,23 @@ public class Login extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 
-		String path;//
+		String path;
+		
 		HttpSession session = request.getSession();
 
 		request.setCharacterEncoding("UTF-8");
 		int studentid = Integer.parseInt(request.getParameter("studentid"));
 		String passwd = request.getParameter("passwd");
 
-		UserDao userDao = new UserDao();
-		User user = new User();
+		StudentDao studentdao = new StudentDao();
+		Student student = new Student();
 
-		user = userDao.getUser(studentid, passwd);
+		student = studentdao.getUser(studentid, passwd);
 
-		if (user != null){
+		if (student != null){
 			System.out.println("ログイン成功");
 			//
-			session.setAttribute("CommmonLoginUser", user);
+			session.setAttribute("CommmonLoginUser", student);
 			//
 			path  = "WEB-INF/jsp/select.jsp";
 		}else{
