@@ -24,5 +24,6 @@
 		</table>
 	　　<input type="submit" value="ログイン"> <input type="reset" value="リセット">
 	</form>
+	<font color="red">${errorMessage}</font>
 </body>
 </html>
