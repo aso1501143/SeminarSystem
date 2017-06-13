@@ -14,11 +14,11 @@
 		<table>
 	<tr>
 			<td>ID:</td>
-			<td><input type="text" name="userid"></td>
+			<td><input type="text" name="studentid"></td>
 			</tr>
 		 	<tr>
 			<td>password:</td>
-			<td><input type="password" name="password"></td>
+			<td><input type="password" name="passwd"></td>
 			</tr>
 		</table>
 		<input type="submit" value="ログイン"> <input type="reset" value="リセット">
