@@ -1,0 +1,112 @@
+/*繧ｿ繧､繝医Ν*/
+@CHARSET "UTF-8";
+
+/*all*/
+
+body{
+	width:1200px;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+table{
+	margin-right:auto;
+	margin-left:auto;
+}
+
+footer{
+	margin-top:10px;
+	bottom:0px;
+	width:1200px;
+	height:70px;
+
+}
+
+a {
+	color:#000000;
+}
+
+a:hover{
+	color:#E48E00;
+}
+
+hr{
+  border-top: 3px solid #0099cc;
+
+}
+
+/*header*/
+.header{
+   width: 1140px;
+   background-color: #286bcc;
+   margin-left:0px;
+   height: 70px;
+   clear:both;
+
+}
+
+.headername{
+  font: 30px Arial, sans-serif,bold;
+  margin-left:20px;
+  margin-top:20px;
+  padding-top:10px;
+
+}
+
+.name{
+  margin-top: -40px;
+}
+
+.right{
+  margin-right: 20px;
+
+}
+
+.logo img{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.logo{
+	margin-top:-100px;
+	float:right;
+
+}
+
+/*category-retrieve*/
+
+.category table{
+	margin-top:45px;
+	text-align:center;
+
+}
+
+.category td{
+	width:200px;
+	height:180px;
+	padding-top:35px;
+
+}
+.itemName{
+	text-align:center;
+	margin-top:5px;
+
+}
+
+
+.hr{
+	margin-top:-25px;
+}
+
+{
+size="5" width="100%" color="#66ffff"
+
+}
+
+
+
+
+
+

@@ -38,7 +38,7 @@ public class UserDao {
 				con.close();
 			}
 		}
-	public User getUser(String userId, String password) {
+	public User getUser(int userId, String password) {
 
 		User user = new User();
 
@@ -49,7 +49,7 @@ public class UserDao {
 			// SQL
 			String sql = "SELECT * FROM user WHERE studentid=? AND passwd=?";
 			stmt = con.prepareStatement(sql);
-			stmt.setString(1, userId);
+			stmt.setInt(1, userId);
 			stmt.setString(2, password);
 			rs = stmt.executeQuery();
 

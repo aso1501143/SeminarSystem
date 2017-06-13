@@ -47,13 +47,13 @@ public class Login extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
-		String pass = request.getParameter("pass");
+		int studentid = Integer.parseInt(request.getParameter("studentid"));
+		String passwd = request.getParameter("passwd");
 
 		UserDao userDao = new UserDao();
 		User user = new User();
 
-		user = userDao.getUser(id, pass);
+		user = userDao.getUser(studentid, passwd);
 
 		if (user != null){
 			System.out.println("ログイン成功");
