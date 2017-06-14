@@ -9,13 +9,13 @@
 <body>
 
 <h1>管理者</h1>
-<A HREF="tesuto.html">ゼミ科目の登録</A>
+<A HREF="WEB-INF/jsp/Subregistration.jsp">ゼミ科目の登録</A>
 
 
 <br><br><br>
 
 
-<A HREF="tesuto.html">受講生徒一覧表</A>
+<A HREF="WEB-INF/jsp/StudentsList.jsp">受講生徒一覧表</A>
 
 
 </body>

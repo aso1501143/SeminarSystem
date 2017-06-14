@@ -9,17 +9,17 @@
 <body>
 <h1>管理者ログイン</h1>
 
-<form action="<%= request.getContextPath() %>/Login" method="POST">
+<form action="<%= request.getContextPath() %>/T01Login" method="POST">
 	　
 		<table>
 	　　　	　　<tr>
 			<tr align="center">
 			<td>ID:</td>
-			<td><input type="text" name="id"></td>
+			<td><input type="text" name="teacherid"></td>
 		　　</tr>
 		　　<tr>
 			<td>パスワード:</td>
-			<td><input type="password" name="password"></td>
+			<td><input type="password" name="passwd"></td>
 		　　</tr>
 		</table>
 	　　<input type="submit" value="ログイン"> <input type="reset" value="リセット">
