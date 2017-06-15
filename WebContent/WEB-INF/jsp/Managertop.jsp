@@ -9,13 +9,12 @@
 <body>
 
 <h1>管理者</h1>
-<A HREF="WEB-INF/jsp/Subregistration.jsp">ゼミ科目の登録</A>
-
+<A HREF="http://localhost:8080/SeminarSystem/WEB-INF/jsp/Subregistration.jsp">ゼミ科目の登録</A>
 
 <br><br><br>
 
 
-<A HREF="WEB-INF/jsp/StudentsList.jsp">受講生徒一覧表</A>
+<A HREF="http://localhost:8080/SeminarSystem/WEB-INF/jsp/StudentsList.jsp">受講生徒一覧表</A>
 
 
 </body>
