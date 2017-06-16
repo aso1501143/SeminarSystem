@@ -39,6 +39,7 @@ public class TeacherDao {
 		}
 	}
 
+	//ログインユーザー（教師）の確認
 	public Teacher getUser(int teacherid, String passwd) {
 
 		Teacher st = new Teacher();

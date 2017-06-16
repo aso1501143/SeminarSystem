@@ -39,6 +39,7 @@ public class StudentDao {
 		}
 	}
 
+	//ログインユーザー(生徒)の確認
 	public Student getUser(int studentid, String passwd) {
 
 		Student st = new Student();
@@ -73,7 +74,10 @@ public class StudentDao {
 			}
 		}
 		return st;
-
-
 	}
+	
+	public void insertData(){
+		
+	}
+	
 }
