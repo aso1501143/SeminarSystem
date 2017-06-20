@@ -54,13 +54,9 @@ public class StudentDao {
 			stmt.setInt(1, studentid);
 			stmt.setString(2, passwd);
 			rs = stmt.executeQuery();
-
-			//
-			//
 			//
 			rs.next();
 
-			//
 			st.setStudentid(rs.getInt("studentid"));
 			st.setPasswd(rs.getString("passwd"));
 
@@ -77,6 +73,8 @@ public class StudentDao {
 	}
 	
 	public void insertData(){
+		
+		
 		
 	}
 	
