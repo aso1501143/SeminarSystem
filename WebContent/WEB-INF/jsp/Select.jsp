@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form action="<%= request.getContextPath() %>/G01Select" method="POST">
 	　　<b>ゼミ科目申込</b><br />
 
 			<p>・IT<br>
@@ -37,6 +37,6 @@
 <input type="submit" value="決定">
 <input type="submit" value="取り消し">
 
-
+</form>
 </body>
 </html>

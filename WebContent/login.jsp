@@ -32,10 +32,9 @@
 				<button type="button" class="btn btn-primary">
 					<span class="glyphicon glyphicon-trash"></span>キャンセル
 				</button>
-	
+
 	</div>
 	</form>
 	</div>
 </body>
 </html>
-

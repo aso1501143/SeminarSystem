@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>ちぇんじ</title>
 </head>
 <body>
+<form action="<%= request.getContextPath() %>/G01torikesi" method="POST">
 
 <style>
 table {
@@ -16,10 +17,10 @@ td {
 	border: solid 1px;
 	padding: 0.5em;
 }
+
 </style>
 
-
-	　　<b>ゼミ科目申込</b><br />
+	　　<b>ゼミ科目変更</b><br />
 
 			<p>・IT<br>
 				<input type="checkbox" name="q1" value="その1"> ITパスポート  <br>
@@ -48,9 +49,9 @@ td {
 
 
 
-<input type="submit" value="取り消し"> <input type="reset" value="決定">
+<input type="reset" value="取り消し"> <input type="submit" value="決定">
 
-
+</form>
 </body>
 </html>
 

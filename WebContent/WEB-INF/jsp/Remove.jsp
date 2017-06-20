@@ -4,17 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Remove</title>
 </head>
 <body>
 
 
 
-
+<form action="<%= request.getContextPath() %>/G01Sure" method="POST">
 
  <style>
 td, tr {
-padding: 15px 30px;
+padding: 15px 15px;
 }
 </style>
 
@@ -35,6 +35,8 @@ padding: 15px 30px;
 
 <input type="submit" value="決定"> <input type="reset" value="取り消し">
 
+
+</form>
 </body>
 </html>
 
