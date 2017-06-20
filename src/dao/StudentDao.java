@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import model.Semi;
 import model.Student;
 
 public class StudentDao {
@@ -72,6 +73,7 @@ public class StudentDao {
 		return st;
 	}
 	
+	//受講科目申込
 	public void insertData(){
 		
 		
