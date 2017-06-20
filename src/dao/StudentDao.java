@@ -76,8 +76,6 @@ public class StudentDao {
 	//受講科目申込
 	public void insertData(){
 		
-		
-		
 	}
 	
 }
