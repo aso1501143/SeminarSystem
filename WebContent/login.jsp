@@ -32,7 +32,7 @@
 				<button type="button" class="btn btn-primary">
 					<span class="glyphicon glyphicon-trash"></span>キャンセル
 				</button>
-	
+	ssss
 	</div>
 	</form>
 	</div>
