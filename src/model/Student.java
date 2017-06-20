@@ -3,7 +3,7 @@ package model;
 import java.io.Serializable;
 
 public class Student implements Serializable {
-	//変数あ
+	//変数
 	private int studentid;
 	private String studentname = "";
 	private String passwd;
