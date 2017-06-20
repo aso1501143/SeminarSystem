@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import model.Semi;
+
 public class SemiDao {
 	// データベースソース
 	DataSource ds = null; // データベース接続情報
@@ -36,4 +38,31 @@ public class SemiDao {
 			con.close();
 		}
 	}
+	
+	public void insertData(Semi semi){
+		int subjectid = semi.getSubjectid();
+		String subjectname = semi.getSubjectname();
+		String subjectcf = semi.getSubjectcf();
+		
+		try {
+
+			// DB接続
+			connection();
+			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
+			String sql = "INSERT INTO semi VALUES(?,?,?);";
+			stmt = con.prepareStatement(sql);
+			stmt.setInt(1, subjectid);
+			stmt.setString(2, subjectname);
+			stmt.setString(3, subjectcf);
+			stmt.executeUpdate();
+		} catch (Exception e) {
+		} finally {
+			try {
+				close();
+			} catch (Exception e) {
+			}
+
+		}
+	}
+
 }
