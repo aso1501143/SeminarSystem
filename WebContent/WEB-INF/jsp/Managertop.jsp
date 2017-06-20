@@ -9,12 +9,12 @@
 <body>
 
 <h1>管理者</h1>
-<A HREF="http://localhost:8080/SeminarSystem/WEB-INF/jsp/Subregistration.jsp">ゼミ科目の登録</A>
+<form action="<%= request.getContextPath() %>/T01ZemiRegister" method="POST"><button>ゼミ科目の登録</button></form>
 
 <br><br><br>
 
 
-<A HREF="http://localhost:8080/SeminarSystem/WEB-INF/jsp/StudentsList.jsp">受講生徒一覧表</A>
+<form action="<%= request.getContextPath() %>/T01SL_confirmation" method="POST"><button>受講生徒一覧表</button></form>
 
 
 </body>
