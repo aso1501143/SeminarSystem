@@ -10,8 +10,30 @@
 </head>
 <body>
 <h1>管理者ログイン</h1>
-
-		</form>
+<div id="main">
+	<form action="<%= request.getContextPath() %>/T01Login" method="POST">
+	<h1>ログイン</h1>
+	<div id="mid">
+		<table>
+		<tr>
+			<td><span style="color: black"
+							class="glyphicon glyphicon-user"></span></td>
+			<td><input type="text" name="teacherid"></td>
+		</tr>
+		 <tr>
+			<td><span style="color: black"
+							class="glyphicon glyphicon-asterisk"></span></td>
+			<td><input type="password" name="passwd"></td>
+		</tr>
+		</table>
+		<button type="submit" class="btn btn-primary">
+			<span class="glyphicon glyphicon-arrow-down">ログイン</span>
+		</button>
+		<button type="reset" class="btn btn-primary">
+			<span class="glyphicon glyphicon-trash">キャンセル</span>
+		</button>
 	</div>
+	</form>
+</div>
 </body>
 </html>
