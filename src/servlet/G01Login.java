@@ -16,7 +16,7 @@ import model.Student;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/Login")
+@WebServlet("/login")
 public class G01Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -61,14 +61,14 @@ public class G01Login extends HttpServlet {
 			//
 			session.setAttribute("CommmonLoginUser", student);
 			//
-			path  = "WEB-INF/jsp/select.jsp";
-		
+			path  = "WEB-INF/jsp/Select.jsp";
+
 		}else{
 			System.out.println("ログイン失敗");
 			request.setAttribute("errorMessage", "会員IDまたはパスワードが違います。");
 			path = "login.jsp";
 		}
-		
+
 		RequestDispatcher rd = request.getRequestDispatcher(path);
 		rd.forward(request, response);
 	}
