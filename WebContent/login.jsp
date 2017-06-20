@@ -12,7 +12,7 @@
 <div id="main">
 
 	<!--form action="/Login/G01Login" method="POST">  -->
-	<form action="<%= request.getContextPath() %>/login" method="POST">
+	<form action="<%= request.getContextPath() %>/G01Login" method="POST">
 	<h1>ログイン</h1>
 	<div id="mid">
 		<table>
