@@ -17,13 +17,13 @@ import model.Student;
  * Servlet implementation class Login
  */
 @WebServlet("/Login")
-public class Login extends HttpServlet {
+public class G01Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Login() {
+	public G01Login() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
