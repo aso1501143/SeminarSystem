@@ -11,7 +11,7 @@
 <body>
 <div id="main">
 
-	<form action="/Login" method="POST">
+	<form action="/login" method="POST">
 	<h1>ログイン</h1>
 	<div id="mid">
 		<table>
