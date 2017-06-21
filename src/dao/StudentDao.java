@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-import model.Semi;
 import model.Student;
 
 public class StudentDao {
@@ -72,10 +71,42 @@ public class StudentDao {
 		}
 		return st;
 	}
-	
+
 	//受講科目申込
 	public void insertData(){
-		
+
 	}
-	
+
+	public Student getsList(int studentid, String studentname) {
+
+		Student st = new Student();
+
+		try {
+			//
+			connection();
+
+			// SQL
+			String sql = "SELECT * FROM student WHERE studentid=? AND passwd=?";
+			stmt = con.prepareStatement(sql);
+			stmt.setInt(1, studentid);
+			stmt.setString(2, studentname);
+			rs = stmt.executeQuery();
+			//
+			rs.next();
+
+			st.setStudentid(rs.getInt("studentid"));
+			st.setPasswd(rs.getString("studentname"));
+
+		} catch (Exception e) {
+			st = null;
+		} finally {
+			try {
+				close();
+			} catch (Exception e) {
+
+			}
+		}
+		return st;
+	}
+
 }

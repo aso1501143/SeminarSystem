@@ -14,7 +14,9 @@
 <br><br><br>
 
 
-<form action="<%= request.getContextPath() %>/T01SL_confirmation" method="POST"><button>受講生徒一覧表</button></form>
+<a href="T01SL_confirmation">受講生徒一覧表</a>
+
+
 
 
 </body>
