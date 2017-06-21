@@ -10,23 +10,24 @@
 
 <h1>科目登録</h1>
 
-<form action="<%= request.getContextPath() %>/Login" method="POST">
+<form action="<%= request.getContextPath() %>/T01ZemiRegister2" method="POST">
 	　　
 		<table>
 	　　　	　　<tr>
 				<tr align="center">
 			<td>教科</td>
-			<td><input type="text" name="subject"></td>
+			<td><input type="text" name="subjectname"></td>
 
 		　　</tr>
 		　　<tr>
 			<td>科目名</td>
-			<td><input type="text" name="subject2"></td>
+			<td><input type="text" name="subjectcf"></td>
 		　　</tr>
 		</table>
 
 
 	　　　　　　　　<input type="submit" value="登録">
 	</form>
+<a href="/Managerlogin.jsp">TOP!</a>
 </body>
 </html>

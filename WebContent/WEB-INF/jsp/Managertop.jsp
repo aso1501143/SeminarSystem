@@ -9,7 +9,7 @@
 <body>
 
 <h1>管理者</h1>
-<form action="<%= request.getContextPath() %>/T01ZemiRegister" method="POST"><button>ゼミ科目の登録</button></form>
+<a href="T01ZemiRegister">ゼミ科目の登録</a>
 
 <br><br><br>
 
