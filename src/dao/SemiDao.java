@@ -61,7 +61,6 @@ public class SemiDao {
 				close();
 			} catch (Exception e) {
 			}
-
 		}
 	}
 }
