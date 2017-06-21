@@ -10,33 +10,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.SemiDao;
 import model.Semi;
 
 /**
- * Servlet implementation class T01zemi
+ * Servlet implementation class T01ZemiRegister2
  */
-@WebServlet("/T01ZemiRegister")
-public class T01ZemiRegister extends HttpServlet {
+@WebServlet("/T01ZemiRegister2")
+public class T01ZemiRegister2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public T01ZemiRegister() {
+    public T01ZemiRegister2() {
         super();
         // TODO Auto-generated constructor stub
     }
-
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/SubRegi.jsp");
-		rd.forward(request, response);
 	}
 
 	/**
@@ -46,18 +41,22 @@ public class T01ZemiRegister extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 
-
 		HttpSession session = request.getSession(false);
+		request.setCharacterEncoding("UTF-8");
 
-		Semi regidata = (Semi)session.getAttribute("T01ZemiRegister");
+		Semi registSemi = (Semi)session.getAttribute("T01ZemiRegister");
 
-		SemiDao semiDao = new SemiDao();
-		semiDao.insertData(regidata);
+		String subjectname = request.getParameter("subjectname");
+		String subjectcf = request.getParameter("subjectcf");
 
-		session.setAttribute("regisemi", regidata);
+		//情報を設定
+		registSemi.setSubjectname(subjectname);
+		registSemi.setSubjectcf(subjectcf);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/SubRegiConp.jsp");
+		//sessionに情報格納
+		session.setAttribute("T01ZemiRegister",registSemi);
+
+		RequestDispatcher rd = request.getRequestDispatcher("SeminarSystem");
 		rd.forward(request, response);
 	}
-
 }

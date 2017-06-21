@@ -8,22 +8,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import dao.SemiDao;
-import model.Semi;
 
 /**
- * Servlet implementation class T01zemi
+ * Servlet implementation class T01ZemiRegister3
  */
-@WebServlet("/T01ZemiRegister")
-public class T01ZemiRegister extends HttpServlet {
+@WebServlet("/T01ZemiRegister3")
+public class T01ZemiRegister3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public T01ZemiRegister() {
+    public T01ZemiRegister3() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,9 +30,6 @@ public class T01ZemiRegister extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/SubRegi.jsp");
-		rd.forward(request, response);
 	}
 
 	/**
@@ -46,18 +39,7 @@ public class T01ZemiRegister extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 
-
-		HttpSession session = request.getSession(false);
-
-		Semi regidata = (Semi)session.getAttribute("T01ZemiRegister");
-
-		SemiDao semiDao = new SemiDao();
-		semiDao.insertData(regidata);
-
-		session.setAttribute("regisemi", regidata);
-
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/SubRegiConp.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("");
 		rd.forward(request, response);
 	}
-
 }

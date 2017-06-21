@@ -38,12 +38,12 @@ public class SemiDao {
 			con.close();
 		}
 	}
-	
+
 	public void insertData(Semi semi){
 		int subjectid = semi.getSubjectid();
 		String subjectname = semi.getSubjectname();
 		String subjectcf = semi.getSubjectcf();
-		
+
 		try {
 
 			// DB接続
@@ -64,5 +64,4 @@ public class SemiDao {
 
 		}
 	}
-
 }
