@@ -55,6 +55,9 @@
 		<input
 			type="submit" value="削除" onclick=" sakujo() ">
 
+
+		<br><br><br><a href="login.jsp">トップページへ</a>
+
 	</form>
 
 </body>
