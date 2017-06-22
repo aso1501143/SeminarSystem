@@ -48,7 +48,6 @@ td {
 
 
 
-
 <input type="reset" value="取り消し"> <input type="submit" value="決定">
 
 <br><br><br><a href="login.jsp">トップページへ</a>
