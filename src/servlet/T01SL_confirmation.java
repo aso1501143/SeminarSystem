@@ -60,7 +60,6 @@ public class T01SL_confirmation extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
 		rd.forward(request, response);
 
-
 	}
 
 }

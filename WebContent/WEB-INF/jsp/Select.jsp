@@ -37,6 +37,8 @@
 <input type="submit" value="決定">
 <input type="submit" value="取り消し">
 
+<br><br><br><a href="login.jsp">トップページへ</a>
+
 </form>
 </body>
 </html>

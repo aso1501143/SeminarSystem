@@ -36,6 +36,8 @@ padding: 15px 15px;
 <input type="submit" value="決定"> <input type="reset" value="取り消し">
 
 
+<br><br><br><a href="login.jsp">トップページへ</a>
+
 </form>
 </body>
 </html>
