@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.SemiDao;
+
 /**
  * Servlet implementation class G01Select
  */
@@ -38,9 +40,16 @@ public class G01Select extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
+		String subjectcf = request.getParameter("subjectcf");
+		SemiDao semidao = new SemiDao();
+		
+		request.setAttribute("array", semidao.getData(subjectcf));
+
+	
 
 		RequestDispatcher  rd =
-				request.getRequestDispatcher("WEB-INF/jsp/Sure.jsp");
+				request.getRequestDispatcher("WEB-INF/jsp/select.jsp");
 		rd.forward(request, response);
 
 

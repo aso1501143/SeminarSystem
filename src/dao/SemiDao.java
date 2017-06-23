@@ -3,9 +3,11 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
 
 import model.Semi;
 
@@ -39,7 +41,7 @@ public class SemiDao {
 		}
 	}
 
-	public void insertData(Semi semi){
+	   public void insertData(Semi semi){
 		int subjectid = semi.getSubjectid();
 		String subjectname = semi.getSubjectname();
 		String subjectcf = semi.getSubjectcf();
@@ -62,5 +64,37 @@ public class SemiDao {
 			} catch (Exception e) {
 			}
 		}
-	}
+	   }
+	   
+	   
+		public ArrayList<Semi> getData(String subjectcf){
+			//▼▼List (大きさが決まっていない配列のようなもの) 、メッセージ格納用変数　準備
+			ArrayList<Semi> list = new ArrayList<Semi>();
+			
+			try{
+				
+			//DB接続
+				connection();
+				
+			//SQL文設定の準備・SQL文の実行
+				String sql = "SELECT * FROM semi WHERE subjectid = ?";
+				stmt = con.prepareStatement(sql); //sql文をプリコンパイルした状態で保持
+				stmt.setString(1, subjectcf);
+			
+				rs = stmt.executeQuery();//sql文を実行
+				
+				while(rs.next()){
+					Semi sm = new Semi();
+					sm.setSubjectid(rs.getInt("subjectid"));
+					sm.setSubjectname(rs.getString("subjectname"));
+					sm.setSubjectcf(rs.getString("subjectcf"));
+					list.add(sm);
+				}
+			}catch (Exception e){
+			}
+			return list;
+			
+		}
+
+
 }
