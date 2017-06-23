@@ -56,11 +56,9 @@ public class TeacherDao {
 			rs = stmt.executeQuery();
 
 			//
-			//
-			//
 			rs.next();
-
 			//
+			
 			st.setTeacherid(rs.getInt("teacherid"));
 			st.setPasswd(rs.getString("passwd"));
 
@@ -75,4 +73,6 @@ public class TeacherDao {
 		}
 		return st;
 	}
+	
+	
 }
