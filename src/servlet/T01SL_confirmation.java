@@ -54,7 +54,7 @@ public class T01SL_confirmation extends HttpServlet {
 
 		RegisterDao Registerdao = new RegisterDao();
 
-		Register = Register.getUser(studentid, studentname);
+		//Register = Register.getUser(studentid, studentname);
 
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
 		rd.forward(request, response);
