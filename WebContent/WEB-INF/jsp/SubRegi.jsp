@@ -5,13 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>科目登録</title>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 	<h1>科目登録</h1>
 
-	<form action="<%=request.getContextPath()%>/T01ZemiRegister2"
-		method="POST">
+	<form action="<%=request.getContextPath()%>/T01ZemiRegister2" method="POST">
 		<p>
 			教科：<br> <select name="subjectcf">
 				<option value="I">IT</option>

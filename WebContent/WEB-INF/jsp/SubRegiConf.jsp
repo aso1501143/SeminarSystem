@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登録確認</title>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<form action="T01ZemiRegister" method="POST">
