@@ -19,42 +19,48 @@ import model.Semi;
 public class T01ZemiRegister2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public T01ZemiRegister2() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+	public T01ZemiRegister2() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//doGet(request, response);
+		// response.getWriter().append("Served at:
+		// ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// doGet(request, response);
 
 		HttpSession session = request.getSession(false);
 		request.setCharacterEncoding("UTF-8");
 
-		Semi registSemi = (Semi)session.getAttribute("T01ZemiRegister");
+		Semi registSemi = (Semi) session.getAttribute("T01ZemiRegister");
 
 		String subjectname = request.getParameter("subjectname");
 		String subjectcf = request.getParameter("subjectcf");
 
-		//情報を設定
+		// 情報を設定
 		registSemi.setSubjectname(subjectname);
 		registSemi.setSubjectcf(subjectcf);
 
-		//sessionに情報格納
-		session.setAttribute("T01ZemiRegister",registSemi);
+		// sessionに情報格納
+		session.setAttribute("T01ZemiRegister", registSemi);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/SubRegiConf.jsp");
 		rd.forward(request, response);

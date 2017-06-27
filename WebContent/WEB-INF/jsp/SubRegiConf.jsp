@@ -13,12 +13,12 @@
 		<table>
 			<tr>
 				<th>教科</th>
-				<td><c:out value="${T01ZemiRegister.subjectname}" /></td>
+				<td><c:out value="${T01ZemiRegister.subjectcf}" /></td>
 			</tr>
 
 			<tr>
 				<th>科目名</th>
-				<td><c:out value="${T01ZemiRegister.subjectcf}" /></td>
+				<td><c:out value="${T01ZemiRegister.subjectname}" /></td>
 			</tr>
 		</table>
 		<p>

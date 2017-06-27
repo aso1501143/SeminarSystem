@@ -50,8 +50,8 @@ public class T01Login extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		request.setCharacterEncoding("UTF-8");
-		int teacherid = Integer.parseInt(request.getParameter("teacherid"));
-		String passwd = request.getParameter("passwd");
+		String teacherid = request.getParameter("teacherid");
+		int passwd = Integer.parseInt(request.getParameter("passwd"));
 
 		TeacherDao teacherdao = new TeacherDao();
 		Teacher teacher = new Teacher();

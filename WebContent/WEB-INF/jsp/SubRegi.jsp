@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,21 +8,21 @@
 </head>
 <body>
 
-<h1>科目登録</h1>
+	<h1>科目登録</h1>
 
-<form action="<%= request.getContextPath() %>/T01ZemiRegister2" method="POST">
-	<p>教科：<br>
-		<select name="subjectname">
-			<option value="I">IT</option>
-			<option value="C">コミュニケーション</option>
-			<option value="E">英語</option>
-		</select>
-	</p>
-	<p>科目名</p>
-	<input type="text" name="subjectcf">
-	<br>
-	<input type="submit" value="登録"><input type="reset" value="リセット">
-</form>
+	<form action="<%=request.getContextPath()%>/T01ZemiRegister2"
+		method="POST">
+		<p>
+			教科：<br> <select name="subjectcf">
+				<option value="I">IT</option>
+				<option value="C">コミュニケーション</option>
+				<option value="E">英語</option>
+			</select>
+		</p>
+		<p>科目名</p>
+		<input type="text" name="subjectname"> <br>
+		<input type="submit" value="登録"><input type="reset" value="リセット">
+	</form>
 	<a href="Managerlogin.jsp">TOP!</a>
 </body>
 </html>
