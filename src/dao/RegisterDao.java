@@ -9,6 +9,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import model.Register;
+import model.Student;
 
 public class RegisterDao {
 	// データベースソース
@@ -39,7 +40,7 @@ public class RegisterDao {
 			con.close();
 		}
 	}
-	
+
 	public void insertData(Register reg){
 		int studentid = reg.getStudentid();
 		int subjectid = reg.getSubjectid();
@@ -61,6 +62,38 @@ public class RegisterDao {
 			}
 
 		}
+	}
+
+	public Student getUser(int studentid, String studentname) {
+
+		Student st = new Student();
+
+		try {
+			//
+			connection();
+
+			// SQL
+			String sql = "SELECT * FROM student WHERE studentid=? AND studentname=?";
+			stmt = con.prepareStatement(sql);
+			stmt.setInt(1, studentid);
+			stmt.setString(2, studentname);
+			rs = stmt.executeQuery();
+			//
+			rs.next();
+
+			st.setStudentid(rs.getInt("studentid"));
+			st.setPasswd(rs.getString("sutdentname"));
+
+		} catch (Exception e) {
+			st = null;
+		} finally {
+			try {
+				close();
+			} catch (Exception e) {
+
+			}
+		}
+		return st;
 	}
 
 }

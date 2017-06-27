@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.StudentDao;
-import model.Student;
+import dao.RegisterDao;
 
 /**
  * Servlet implementation class T01SL_show
@@ -49,13 +48,13 @@ public class T01SL_confirmation extends HttpServlet {
 		// doGet(request, response);
 
 		request.setCharacterEncoding("UTF-8");
+
 		int studentid = Integer.parseInt(request.getParameter("studentid"));
-		String studentname= request.getParameter("studentname");
+		String Register= request.getParameter("studentname");
 
-		StudentDao studentdao = new StudentDao();
-		Student student = new Student();
+		RegisterDao Registerdao = new RegisterDao();
 
-		student = studentdao.getUser(studentid, studentname);
+		//Register = Register.getUser(studentid, studentname);
 
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
 		rd.forward(request, response);
