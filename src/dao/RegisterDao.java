@@ -41,7 +41,6 @@ public class RegisterDao {
 	}
 	
 	public void insertData(Register reg){
-		int regid = reg.getRegid();
 		int studentid = reg.getStudentid();
 		int subjectid = reg.getSubjectid();
 		try {
@@ -49,8 +48,7 @@ public class RegisterDao {
 			// DB接続
 			connection();
 			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
-			String sql = "INSERT INTO register VALUES(?,?,?);";
-			stmt.setInt(1, regid);
+			String sql = "INSERT INTO register VALUES(?,?);";
 			stmt.setInt(2, studentid);
 			stmt.setInt(3, subjectid);
 			stmt = con.prepareStatement(sql);
