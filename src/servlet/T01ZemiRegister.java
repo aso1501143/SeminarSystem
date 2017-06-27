@@ -49,7 +49,7 @@ public class T01ZemiRegister extends HttpServlet {
 
 		HttpSession session = request.getSession(false);
 
-		Semi regidata = (Semi)session.getAttribute("T01ZemiRegister2");
+		Semi regidata = (Semi)session.getAttribute("T01ZemiRegister");
 
 		SemiDao semiDao = new SemiDao();
 		semiDao.insertData(regidata);

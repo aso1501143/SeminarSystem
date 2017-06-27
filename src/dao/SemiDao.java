@@ -52,8 +52,8 @@ public class SemiDao {
 			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
 			String sql = "INSERT INTO semi VALUES(?,?);";
 			stmt = con.prepareStatement(sql);
-			stmt.setString(2, subjectname);
-			stmt.setString(3, subjectcf);
+			stmt.setString(1, subjectname);
+			stmt.setString(2, subjectcf);
 			stmt.executeUpdate();
 		} catch (Exception e) {
 		} finally {

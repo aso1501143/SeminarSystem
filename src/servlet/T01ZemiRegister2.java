@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.SemiDao;
 import model.Semi;
 
 /**
@@ -48,19 +49,19 @@ public class T01ZemiRegister2 extends HttpServlet {
 		// doGet(request, response);
 
 		HttpSession session = request.getSession(false);
-		request.setCharacterEncoding("UTF-8");
 
-		Semi registSemi = (Semi) session.getAttribute("T01ZemiRegister");
-
+		Semi regiSemi = new Semi();
+		
+		//フォームの確認
 		String subjectname = request.getParameter("subjectname");
 		String subjectcf = request.getParameter("subjectcf");
 
 		// 情報を設定
-		registSemi.setSubjectname(subjectname);
-		registSemi.setSubjectcf(subjectcf);
+		regiSemi.setSubjectname(subjectname);
+		regiSemi.setSubjectcf(subjectcf);
 
 		// sessionに情報格納
-		session.setAttribute("T01ZemiRegister", registSemi);
+		session.setAttribute("T01ZemiRegister", regiSemi);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/SubRegiConf.jsp");
 		rd.forward(request, response);
