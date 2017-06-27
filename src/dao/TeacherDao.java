@@ -40,7 +40,7 @@ public class TeacherDao {
 	}
 
 	//ログインユーザー（教師）の確認
-	public Teacher getUser(int teacherid, String passwd) {
+	public Teacher getUser(String teacherid, int passwd) {
 
 		Teacher st = new Teacher();
 
@@ -51,16 +51,16 @@ public class TeacherDao {
 			// SQL
 			String sql = "SELECT * FROM teacher WHERE teacherid=? AND passwd=?";
 			stmt = con.prepareStatement(sql);
-			stmt.setInt(1, teacherid);
-			stmt.setString(2, passwd);
+			stmt.setString(1, teacherid);
+			stmt.setInt(2, passwd);
 			rs = stmt.executeQuery();
 
 			//
 			rs.next();
 			//
-			
-			st.setTeacherid(rs.getInt("teacherid"));
-			st.setPasswd(rs.getString("passwd"));
+
+			st.setTeacherid(rs.getString("teacherid"));
+			st.setPasswd(rs.getInt("passwd"));
 
 		} catch (Exception e) {
 			st = null;
@@ -73,6 +73,6 @@ public class TeacherDao {
 		}
 		return st;
 	}
-	
-	
+
+
 }

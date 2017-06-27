@@ -40,16 +40,16 @@ public class G01Select extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		
+
 		String subjectcf = request.getParameter("subjectcf");
 		SemiDao semidao = new SemiDao();
-		
+
 		request.setAttribute("array", semidao.getData(subjectcf));
 
-	
+
 
 		RequestDispatcher  rd =
-				request.getRequestDispatcher("WEB-INF/jsp/Select.jsp");
+				request.getRequestDispatcher("WEB-INF/jsp/Sure.jsp");
 		rd.forward(request, response);
 
 

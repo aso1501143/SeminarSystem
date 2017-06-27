@@ -42,7 +42,6 @@ public class SemiDao {
 	}
 
 	   public void insertData(Semi semi){
-		int subjectid = semi.getSubjectid();
 		String subjectname = semi.getSubjectname();
 		String subjectcf = semi.getSubjectcf();
 
@@ -51,9 +50,8 @@ public class SemiDao {
 			// DB接続
 			connection();
 			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
-			String sql = "INSERT INTO semi VALUES(?,?,?);";
+			String sql = "INSERT INTO semi VALUES(?,?);";
 			stmt = con.prepareStatement(sql);
-			stmt.setInt(1, subjectid);
 			stmt.setString(2, subjectname);
 			stmt.setString(3, subjectcf);
 			stmt.executeUpdate();

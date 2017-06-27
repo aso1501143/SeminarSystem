@@ -4,19 +4,19 @@ import java.io.Serializable;
 
 public class Teacher implements Serializable{
 	//変数
-		private int teacherid;
+		private String teacherid;
 		private String teachername = "";
-		private String passwd;
+		private int passwd;
 
 		//デフォルトコンストラクタ
 		public Teacher(){}
 
 		//アクセッサ
-		public int getTeacherid() {
+		public String getTeacherid() {
 			return teacherid;
 		}
 
-		public void setTeacherid(int teacherid) {
+		public void setTeacherid(String teacherid) {
 			this.teacherid = teacherid;
 		}
 
@@ -28,11 +28,11 @@ public class Teacher implements Serializable{
 			this.teachername = teachername;
 		}
 
-		public String getPasswd() {
+		public int getPasswd() {
 			return passwd;
 		}
 
-		public void setPasswd(String string) {
-			this.passwd = string;
+		public void setPasswd(int passwd) {
+			this.passwd = passwd;
 		}
 }
