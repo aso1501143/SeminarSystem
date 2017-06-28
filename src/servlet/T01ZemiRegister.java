@@ -56,7 +56,7 @@ public class T01ZemiRegister extends HttpServlet {
 
 		session.setAttribute("regisemi", regidata);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/SubRegiConp.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/T/SubRegiConp.jsp");
 		rd.forward(request, response);
 	}
 

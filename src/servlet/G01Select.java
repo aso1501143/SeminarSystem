@@ -49,7 +49,7 @@ public class G01Select extends HttpServlet {
 
 
 		RequestDispatcher  rd =
-				request.getRequestDispatcher("WEB-INF/jsp/Sure.jsp");
+				request.getRequestDispatcher("WEB-INF/S/Sure.jsp");
 		rd.forward(request, response);
 
 

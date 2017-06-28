@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="login.jsp">生徒</a>
-<a href="Managerlogin.jsp">管理者</a>
+<a href="G01Login">生徒</a>
+<a href="T01Login">管理者</a>
 </body>
 </html>
