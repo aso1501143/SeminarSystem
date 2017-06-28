@@ -39,10 +39,10 @@ public class G01Sure extends HttpServlet {
 		//doGet(request, response);
 
 
-	
-		
-		
-		
+
+
+
+
 		RequestDispatcher  rd =
 				request.getRequestDispatcher("WEB-INF/jsp/Sure.jsp");
 		rd.forward(request, response);
