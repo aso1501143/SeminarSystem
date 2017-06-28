@@ -63,7 +63,7 @@ public class T01ZemiRegister2 extends HttpServlet {
 		// sessionに情報格納
 		session.setAttribute("T01ZemiRegister", regiSemi);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/Ts/SubRegiConf.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/T/SubRegiConf.jsp");
 		rd.forward(request, response);
 	}
 }
