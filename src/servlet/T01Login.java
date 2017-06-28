@@ -65,12 +65,12 @@ public class T01Login extends HttpServlet {
 			//
 			session.setAttribute("CommmonLoginUser", teacher);
 			//
-			path  = "WEB-INF/jsp/Managertop.jsp";
+			path  = "WEB-INF/T/Managertop.jsp";
 
 		}else{
 			System.out.println("ログイン失敗");
 			request.setAttribute("errorMessage", "会員IDまたはパスワードが違います。");
-			path = "Managerlogin.jsp";
+			path = "WEB-INF/T/Managertop.jsp";
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher(path);

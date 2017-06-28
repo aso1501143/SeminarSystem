@@ -63,13 +63,13 @@ public class G01Login extends HttpServlet {
 			//
 			session.setAttribute("CommmonLoginUser", student);
 			//
-			path  = "WEB-INF/jsp/Select.jsp";
+			path  = "WEB-INF/S/Select.jsp";
 
 
 		}else{
 			System.out.println("ログイン失敗");
 			request.setAttribute("errorMessage", "会員IDまたはパスワードが違います。");
-			path = "login.jsp";
+			path = "WEB-INF/S/Select.jsp";
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher(path);
