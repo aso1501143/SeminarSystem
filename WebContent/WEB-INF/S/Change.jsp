@@ -1,58 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ちぇんじ</title>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<form action="<%= request.getContextPath() %>/G01torikesi" method="POST">
+	<form action="<%=request.getContextPath()%>/G01torikesi"
+		method="POST">
 
-<style>
+		<style>
 table {
 	border-collapse: collapse;
 }
+
 td {
 	border: solid 1px;
 	padding: 0.5em;
 }
-
 </style>
 
-	　　<b>ゼミ科目変更</b><br />
+		<h1>ゼミ科目変更</h1>
+		<br /> ・IT分野<br>
+		<ul style="list-style: none;">
+			<li><input type="checkbox" name="q1" value="その1"> <span
+				style="border-bottom: dotted 3px #89abc6;">ITパスポート</span></li>
+			<li><input type="checkbox" name="q1" value="その2"> <span
+				style="border-bottom: dotted 3px #89abc6;">基本情報</span></li>
+			<li><input type="checkbox" name="q1" value="その3"> <span
+				style="border-bottom: dotted 3px #89abc6;">応用情報</span></li>
+		</ul>
 
-			<p>・IT<br>
-				<input type="checkbox" name="q1" value="その1"> ITパスポート  <br>
-				<input type="checkbox" name="q1" value="その2"> 基本情報      <br>
-				<input type="checkbox" name="q1" value="その3"> 応用情報      <br>
-		</p>
+		・英語<br>
+		<ul style="list-style: none;">
+			<li><input type="checkbox" name="q1" value="その1"> <span
+				style="border-bottom: dotted 3px #89abc6;">英語基礎</span><br></li>
+			<li><input type="checkbox" name="q1" value="その2"> <span
+				style="border-bottom: dotted 3px #89abc6;">リスニング</span><br></li>
+		</ul>
 
+		・コミュニケーション<br>
+		<ul style="list-style: none;">
+			<li><input type="checkbox" name="q1" value="その1"> <span
+				style="border-bottom: dotted 3px #89abc6;">グループディスカッション</span><br>
+			</li>
+			<li><input type="checkbox" name="q1" value="その2"> <span
+				style="border-bottom: dotted 3px #89abc6;">グループワーク</span><br></li>
+		</ul>
 
+		<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-ok-sign"></span>決定
+		</button>
+		<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-remove-sign"></span>取消
+		</button>
 
+		<br>
+		<br>
+		<br>
+		<a href="login.jsp">トップページへ</a>
 
-			<p>・英語<br>
-				<input type="checkbox" name="q1" value="その1"> 英語基礎 <br>
-				<input type="checkbox" name="q1" value="その2"> リスニング    <br>
-
-		</p>
-
-
-
-
-			<p>・コミュニケーション<br>
-				<input type="checkbox" name="q1" value="その1"> グループディスカッション  <br>
-				<input type="checkbox" name="q1" value="その2"> グループワーク     <br>
-
-		</p>
-
-
-
-<input type="reset" value="取り消し"> <input type="submit" value="決定">
-
-<br><br><br><a href="login.jsp">トップページへ</a>
-
-</form>
+	</form>
 </body>
 </html>
 

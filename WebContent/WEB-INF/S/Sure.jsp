@@ -5,6 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+
 <script type="text/javascript">
 	function change() {
 		document.form.action = "G01Change";
@@ -23,40 +26,38 @@
 
 	<form name="form" method="POST" onSubmit="return check()">
 
-
-		<table border="1" width="300" cellspacing="0" cellpadding="30"
-			bordercolor="#333333">
-			<caption>科目の確認</caption>
+		<h1>科目の確認</h1>
+		<center>
+		<table border="1" class="table-design-set-1">
 			<tr>
-				<td title="セル1-1">科目の確認</td>
-				<td title="セル1-2">日付</td>
-
+				<th>科目の確認</th>
+				<th>日付</th>
 			</tr>
+			<tr align="center">
 			<tr>
-				<td title="セル2-1"></td>
-				<td title="セル2-2"></td>
+				<td></td>
+				<td></td>
 			</tr>
-
+			<tr align="center">
 			<tr>
-				<td title="セル2-1"></td>
-				<td title="セル2-2"></td>
+				<td></td>
+				<td></td>
 			</tr>
-
+			<tr align="center">
 			<tr>
-				<td title="セル2-1"></td>
-				<td title="セル2-2"></td>
+				<td></td>
+				<td></td>
 			</tr>
-
-
-
 		</table>
 
-		<input type="submit" value="変更" onclick="change()">
-		<input
-			type="submit" value="削除" onclick=" sakujo() ">
-
-
-		<br><br><br><a href="login.jsp">トップページへ</a>
+			<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-ok-sign"></span>変更
+		</button>
+		<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-remove-sign"></span>削除
+		</button>
+		</center>
+		<br> <a href="login.jsp">トップページへ</a>
 
 	</form>
 

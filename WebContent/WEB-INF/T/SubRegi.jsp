@@ -11,19 +11,28 @@
 <body>
 
 	<h1>科目登録</h1>
+	<center>
+		<form action="<%=request.getContextPath()%>/T01ZemiRegister2"
+			method="POST">
+			<p>
+				教科： <select name="subjectcf">
+					<option value="I">IT</option>
+					<option value="C">コミュニケーション</option>
+					<option value="E">英語</option>
+				</select>
+			</p>
+			科目名:
+			<input type="text" name="subjectname"> <br> 
+			<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-ok-sign"></span>決定
+		</button>
 
-	<form action="<%=request.getContextPath()%>/T01ZemiRegister2" method="POST">
-		<p>
-			教科：<br> <select name="subjectcf">
-				<option value="I">IT</option>
-				<option value="C">コミュニケーション</option>
-				<option value="E">英語</option>
-			</select>
-		</p>
-		<p>科目名</p>
-		<input type="text" name="subjectname"> <br>
-		<input type="submit" value="登録"><input type="reset" value="リセット">
-	</form>
-	<a href="Managerlogin.jsp">TOP!</a>
+			<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-remove-sign"></span>リセット
+		</button>
+		</form>
+		<a href="Managerlogin.jsp">TOP!</a>
+
+	</center>
 </body>
 </html>
