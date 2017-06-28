@@ -8,18 +8,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.RegisterDao;
+import model.Register;
 
 /**
- * Servlet implementation class G01Sure
+ * Servlet implementation class T01SubSelect
  */
-@WebServlet("/G01Sure")
-public class G01Sure extends HttpServlet {
+@WebServlet("/T01SubSelect")
+public class T01SubSelect extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public G01Sure() {
+    public T01SubSelect() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,6 +33,8 @@ public class G01Sure extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+
 	}
 
 	/**
@@ -39,14 +45,25 @@ public class G01Sure extends HttpServlet {
 		//doGet(request, response);
 
 
+		HttpSession session = request.getSession();
+
+		request.setCharacterEncoding("UTF-8");
+		int studentid;
+		String studentname = "";
+		String subjectcf = request.getParameter("subjectcf");
+
+	//	regiSemi.setSubjectcf(subjectcf);
 
 
 
+		RegisterDao RegisterDao = new RegisterDao();
+		Register Register = new Register();
 
-		RequestDispatcher  rd =
-				request.getRequestDispatcher("WEB-INF/jsp/Sure.jsp");
+		//Register = RegisterDao.getUser(studentid, studentname);
+
+
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
 		rd.forward(request, response);
-
 
 	}
 

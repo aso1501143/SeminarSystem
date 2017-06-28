@@ -12,7 +12,7 @@
 
 	<h1>受講生徒一覧</h1>
 	<center>
-		科目名：国語
+		科目名：IT
 
 
 		<table border="1" class="table-design-set-1">
