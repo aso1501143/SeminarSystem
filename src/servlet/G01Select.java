@@ -44,7 +44,7 @@ public class G01Select extends HttpServlet {
 		String subjectcf = request.getParameter("subjectcf");
 		SemiDao semidao = new SemiDao();
 
-		request.setAttribute("array", semidao.getData(subjectcf));
+		request.setAttribute("cf", semidao.getData(subjectcf));
 
 
 
