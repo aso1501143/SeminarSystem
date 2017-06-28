@@ -73,7 +73,7 @@ public class RegisterDao {
 			connection();
 
 			// SQL
-			String sql = "SELECT * FROM student WHERE studentid=? AND studentname=?";
+			String sql = "SELECT * FROM  WHERE studentid=? AND studentname=?";
 			stmt = con.prepareStatement(sql);
 			stmt.setInt(1, studentid);
 			stmt.setString(2, studentname);

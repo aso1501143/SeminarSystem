@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.RegisterDao;
-
 /**
  * Servlet implementation class T01SL_show
  */
@@ -36,6 +34,10 @@ public class T01SL_confirmation extends HttpServlet {
 		// response.getWriter().append("Served at:
 		// ").append(request.getContextPath());
 
+
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/StudentsList.jsp");
+		rd.forward(request, response);
+
 	}
 
 	/**
@@ -47,17 +49,17 @@ public class T01SL_confirmation extends HttpServlet {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
 
-		request.setCharacterEncoding("UTF-8");
+	//	request.setCharacterEncoding("UTF-8");
 
-		int studentid = Integer.parseInt(request.getParameter("studentid"));
-		String Register= request.getParameter("studentname");
+	//int studentid = Integer.parseInt(request.getParameter("studentid"));
+	//	String Register= request.getParameter("studentname");
 
-		RegisterDao Registerdao = new RegisterDao();
+	//	RegisterDao Registerdao = new RegisterDao();
 
 		//Register = Register.getUser(studentid, studentname);
 
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
-		rd.forward(request, response);
+		//RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
+		//rd.forward(request, response);
 
 	}
 
