@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath()%>/T01ZemiRegister2"
+	<form action="<%=request.getContextPath()%>/SubSelect"
 		method="POST">
 		<p>
 			教科：<br> <select name="subjectcf">

@@ -35,7 +35,7 @@ public class T01SL_confirmation extends HttpServlet {
 		// ").append(request.getContextPath());
 
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/SubSelect.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/T/SubSelect.jsp");
 		rd.forward(request, response);
 
 	}
