@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.SemiDao;
 import model.Semi;
 
 /**
@@ -51,7 +50,7 @@ public class T01ZemiRegister2 extends HttpServlet {
 		HttpSession session = request.getSession(false);
 
 		Semi regiSemi = new Semi();
-		
+
 		//フォームの確認
 		String subjectname = request.getParameter("subjectname");
 		String subjectcf = request.getParameter("subjectcf");
