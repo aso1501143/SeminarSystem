@@ -9,32 +9,54 @@
 </head>
 <body>
 <form action="G01Select" method="POST">
-	　　<b>ゼミ科目申込</b><br />
+		<h1>ゼミ科目申込</h1>
+	<br>
+		・IT分野<br>
+	<ul style="list-style:none;">
+		<li><input type="checkbox" name="q1" value="その1">
+		<span style="border-bottom:dotted 3px #89abc6;">ITパスポート</span>
+		</li>
+		<li>
+		 <input type="checkbox" name="q1" value="その2">
+		<span style="border-bottom:dotted 3px #89abc6;">基本情報</span>
+		</li>
+		<li>
+		<input type="checkbox" name="q1" value="その3">
+		<span style="border-bottom:dotted 3px #89abc6;">応用情報</span>
+		</li>
+	</ul>
 
-	
-		<c:forEach var="data" items="${requestScope.cf}" varStatus="status">
-			<c:if test="${data.subjectcf  == 'I' }">
-			
-				<input type="checkbox" name="IT" value="${data.subjectid}"><c:out value="${data.subjectname }" />      <br>
-			
-			</c:if>
-		
-	
-		
-			<c:if test="${data.subjectcf  == 'E' }">
-			
-				<input type="checkbox" name="English" value="${data.subjectid}"> <c:out value="${data.subjectname }" />      <br>
-			</c:if>
-		
-		
-			<c:if test="${data.subjectcf  == 'C' }">
-				<input type="checkbox" name="Communication" value="${data.subjectid}"> <c:out value="${data.subjectname }" />     <br>
-			</c:if>
-</c:forEach>
-<input type="submit" value="決定">
-<input type="submit" value="取り消し">
 
-<br><br><br><a href="StudentTop.jsp">トップページへ</a>
+
+
+		・英語<br>
+		<ul style="list-style:none;">
+		<li>
+		<input type="checkbox" name="q1" value="その1">
+		<span style="border-bottom:dotted 3px #89abc6;">英語基礎</span><br>
+		</li>
+		<li>
+		<input type="checkbox" name="q1" value="その2">
+		<span style="border-bottom:dotted 3px #89abc6;">リスニング</span><br>
+		</li>
+		</ul>
+
+
+
+
+		・コミュニケーション<br>
+		<ul style="list-style:none;">
+		<li>
+		<input type="checkbox" name="q1" value="その1">
+		<span style="border-bottom:dotted 3px #89abc6;">グループディスカッション</span><br>
+		</li>
+		<li>
+		<input type="checkbox" name="q1" value="その2">
+		<span style="border-bottom:dotted 3px #89abc6;">グループワーク</span><br>
+		</li>
+		</ul>
+
+<input type="submit" value="決定"> <input type="submit" value="取り消し"> <br><br><br><a href="login.jsp">トップページへ</a>
 
 </form>
 </body>
