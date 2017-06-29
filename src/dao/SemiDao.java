@@ -65,7 +65,7 @@ public class SemiDao {
 	   }
 	   
 	   
-		public ArrayList<Semi> getData(String subjectcf){
+		public ArrayList<Semi> getData(){
 			//▼▼List (大きさが決まっていない配列のようなもの) 、メッセージ格納用変数　準備
 			ArrayList<Semi> list = new ArrayList<Semi>();
 			
@@ -75,9 +75,9 @@ public class SemiDao {
 				connection();
 				
 			//SQL文設定の準備・SQL文の実行
-				String sql = "SELECT * FROM semi WHERE subjectid = ?";
+				String sql = "SELECT * FROM semi";
 				stmt = con.prepareStatement(sql); //sql文をプリコンパイルした状態で保持
-				stmt.setString(1, subjectcf);
+				//stmt.setString(1, subjectcf);
 			
 				rs = stmt.executeQuery();//sql文を実行
 				

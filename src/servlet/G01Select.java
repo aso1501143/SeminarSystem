@@ -31,7 +31,17 @@ public class G01Select extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());		String subjectcf = request.getParameter("subjectcf");
+		
+		SemiDao semidao = new SemiDao();
+
+		request.setAttribute("cf", semidao.getData());
+
+		RequestDispatcher  rd =
+				request.getRequestDispatcher("WEB-INF/S/Select.jsp");
+		rd.forward(request, response);
+
+		
 	}
 
 	/**
@@ -41,10 +51,11 @@ public class G01Select extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 
-		String subjectcf = request.getParameter("subjectcf");
+		//
+
 		SemiDao semidao = new SemiDao();
 
-		request.setAttribute("cf", semidao.getData(subjectcf));
+
 
 
 

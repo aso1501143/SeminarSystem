@@ -10,39 +10,36 @@
 <body>
 <form action="/G01Select" method="POST">
 	　　<b>ゼミ科目申込</b><br />
-<c:forEach var="data" items="${requestScope.array}">
-		<p>・IT<br>
-			<c:if test="${status.count  == 0 }">
-				<input type="checkbox" name="q1" value="その3"> 応用情報      <br>
+
+	
+		<c:forEach var="data" items="${requestScope.cf}" varStatus="status">
+			<c:if test="${data.subjectcf  == 'I' }">
+			
+				<input type="checkbox" name="IT" value="${data.subjectid}"><c:out value="${data.subjectname }" />      <br>
+			
 			</c:if>
-		</p>
-
-
-
-
-		<p>・英語<br>
-				<c:if test="${status.count % 3 == 0 }">
-				<input type="checkbox" name="q1" value="その1"> ITパスポート  <br>
-				<input type="checkbox" name="q1" value="その2"> 基本情報      <br>
-				<input type="checkbox" name="q1" value="その3"> 応用情報      <br>
+		
+	
+		
+			<c:if test="${data.subjectcf  == 'E' }">
+			<p>・英語</p>
+			
+				<input type="checkbox" name="English" value="${data.subjectid}"> <c:out value="${data.subjectname }" />      <br>
+		
 			</c:if>
-		</p>
+		
+		
+			<c:if test="${data.subjectcf  == 'C' }">
+		
+			<p>・コミュニケーション</p>
 
-
-
-
-		<p>・コミュニケーション<br>
-			<c:if test="${status.count % 3 == 0 }">
-				<input type="checkbox" name="q1" value="その1"> ITパスポート  <br>
-				<input type="checkbox" name="q1" value="その2"> 基本情報      <br>
-				<input type="checkbox" name="q1" value="その3"> 応用情報      <br>
+				<input type="checkbox" name="Communication" value="${data.subjectid}"> <c:out value="${data.subjectname }" />     <br>
 			</c:if>
-		</p>
 </c:forEach>
 <input type="submit" value="決定">
 <input type="submit" value="取り消し">
 
-<br><br><br><a href="login.jsp">トップページへ</a>
+<br><br><br><a href="StudentTop.jsp">トップページへ</a>
 
 </form>
 </body>
