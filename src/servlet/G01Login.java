@@ -61,7 +61,7 @@ public class G01Login extends HttpServlet {
 		if (student != null){
 			System.out.println("ログイン成功");
 			//
-			session.setAttribute("CommmonLoginUser", student);
+			session.setAttribute("CLU", student);
 			//
 			path  = "WEB-INF/S/StudentTop.jsp";
 

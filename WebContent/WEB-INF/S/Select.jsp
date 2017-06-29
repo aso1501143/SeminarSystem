@@ -8,7 +8,7 @@
 <title>ゼミ科目の申込</title>
 </head>
 <body>
-<form action="/G01Select" method="POST">
+<form action="G01Select" method="POST">
 	　　<b>ゼミ科目申込</b><br />
 
 	
@@ -22,17 +22,12 @@
 	
 		
 			<c:if test="${data.subjectcf  == 'E' }">
-			<p>・英語</p>
 			
 				<input type="checkbox" name="English" value="${data.subjectid}"> <c:out value="${data.subjectname }" />      <br>
-		
 			</c:if>
 		
 		
 			<c:if test="${data.subjectcf  == 'C' }">
-		
-			<p>・コミュニケーション</p>
-
 				<input type="checkbox" name="Communication" value="${data.subjectid}"> <c:out value="${data.subjectname }" />     <br>
 			</c:if>
 </c:forEach>

@@ -8,8 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.SemiDao;
+import model.Register;
+import model.Semi;
+import model.Student;
+
 
 /**
  * Servlet implementation class G01Select
@@ -50,17 +55,27 @@ public class G01Select extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-
-		//
-
-		SemiDao semidao = new SemiDao();
-
-
-
+		HttpSession session = request.getSession(false);
+		
+		Student student = (Student)session.getAttribute("CLU");
+		
+		
 
 
-		RequestDispatcher  rd =
-				request.getRequestDispatcher("WEB-INF/S/Sure.jsp");
+		Register reg = new Register();
+		
+		//フォームの確認
+		int studentid = student.getStudentid();
+		int subjectid = Integer.parseInt(request.getParameter("subjectid"));
+
+		// 情報を設定
+		reg.setStudentid(studentid);
+		reg.setSubjectid(subjectid);
+
+		// sessionに情報格納
+		session.setAttribute("G01Confirm", reg);
+
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/S/Studentconfirm.jsp");
 		rd.forward(request, response);
 
 

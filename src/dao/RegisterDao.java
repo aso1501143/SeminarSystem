@@ -49,9 +49,9 @@ public class RegisterDao {
 			// DB接続
 			connection();
 			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
-			String sql = "INSERT INTO register VALUES(?,?);";
-			stmt.setInt(2, studentid);
-			stmt.setInt(3, subjectid);
+			String sql = "INSERT INTO semi(studentid,subjectid) VALUES(?,?);";
+			stmt.setInt(1, studentid);
+			stmt.setInt(2, subjectid);
 			stmt = con.prepareStatement(sql);
 			stmt.executeUpdate();
 		} catch (Exception e) {
