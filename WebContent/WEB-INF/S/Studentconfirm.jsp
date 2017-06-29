@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<form action="T01ZemiRegister" method="POST">
+	<form action="G01Confirm" method="POST">
 		<table>
 			<tr>
 				<th>学生ID</th>
-				<td><c:out value="${G01Confirm.studentid}" /></td>
+				<td><c:out value="${regdata.studentid}" /></td>
 			</tr>
 
 			<tr>
 				<th>科目名</th>
-				<td><c:out value="${G01Confirm.subjectid}" /></td>
+				<td><c:out value="${regdata.subjectid}" /></td>
 			</tr>
 		</table>
 		<p>

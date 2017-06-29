@@ -41,18 +41,20 @@ public class RegisterDao {
 		}
 	}
 
-	public void insertData(Register reg){
-		int studentid = reg.getStudentid();
-		int subjectid = reg.getSubjectid();
+	public void insertData(Register Reg){
+		
+		int sni = Reg.getStudentid();
+		int sui = Reg.getSubjectid();
+
 		try {
 
 			// DB接続
 			connection();
 			// INSERT文の設定・実行 //INパラメータ(プレースホルダー)の使用例。サニタイジングのために使おう!
-			String sql = "INSERT INTO semi(studentid,subjectid) VALUES(?,?);";
-			stmt.setInt(1, studentid);
-			stmt.setInt(2, subjectid);
+			String sql = "INSERT INTO register(studentid,subjectid) VALUES(?,?);";
 			stmt = con.prepareStatement(sql);
+			stmt.setInt(1, sni);
+			stmt.setInt(2, sui);
 			stmt.executeUpdate();
 		} catch (Exception e) {
 		} finally {
@@ -60,8 +62,8 @@ public class RegisterDao {
 				close();
 			} catch (Exception e) {
 			}
-
 		}
+
 	}
 
 	public Student getUser(int studentid, String studentname) {

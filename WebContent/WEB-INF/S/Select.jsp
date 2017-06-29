@@ -8,56 +8,61 @@
 <title>ゼミ科目の申込</title>
 </head>
 <body>
-<form action="G01Select" method="POST">
+<form>
+
 		<h1>ゼミ科目申込</h1>
+<c:forEach var="data" items="${requestScope.cf}">
 	<br>
-		・IT分野<br>
+		
+		<c:if test="${data.subjectcf  == 'I' }">
+		<c:forEach begin="1" end="1" step="1">
+		・IT<br>
+		</c:forEach>
+
 	<ul style="list-style:none;">
-		<li><input type="checkbox" name="q1" value="その1">
-		<span style="border-bottom:dotted 3px #89abc6;">ITパスポート</span>
-		</li>
 		<li>
-		 <input type="checkbox" name="q1" value="その2">
-		<span style="border-bottom:dotted 3px #89abc6;">基本情報</span>
-		</li>
-		<li>
-		<input type="checkbox" name="q1" value="その3">
-		<span style="border-bottom:dotted 3px #89abc6;">応用情報</span>
-		</li>
+		<span style="border-bottom:dotted 3px #89abc6;"><c:out value="${data.subjectname }" />
+		<a href="#" onclick="document.a.subjectid.value='${data.subjectid }'; document,a.submit(); return false;">申し込む</a>
+　　</span>
 	</ul>
-
-
-
-
+		</c:if>
+		
+		<c:if test="${data.subjectcf  == 'E' }">
+		<c:forEach begin="1" end="1" step="1">
 		・英語<br>
-		<ul style="list-style:none;">
+		</c:forEach>
+
+	<ul style="list-style:none;">
 		<li>
-		<input type="checkbox" name="q1" value="その1">
-		<span style="border-bottom:dotted 3px #89abc6;">英語基礎</span><br>
-		</li>
-		<li>
-		<input type="checkbox" name="q1" value="その2">
-		<span style="border-bottom:dotted 3px #89abc6;">リスニング</span><br>
-		</li>
-		</ul>
+		<span style="border-bottom:dotted 3px #89abc6;"><c:out value="${data.subjectname }" />
+		<a href="#" onclick="document.a.subjectid.value='${data.subjectid }'; document,a.submit(); return false;">申し込む</a>
+　　</span>
+	</ul>
+		</c:if>
 
-
-
-
+		
+		<c:if test="${data.subjectcf  == 'C' }">
+		<c:forEach begin="1" end="1" step="1">
 		・コミュニケーション<br>
-		<ul style="list-style:none;">
+		</c:forEach>
+
+	<ul style="list-style:none;">
 		<li>
-		<input type="checkbox" name="q1" value="その1">
-		<span style="border-bottom:dotted 3px #89abc6;">グループディスカッション</span><br>
-		</li>
-		<li>
-		<input type="checkbox" name="q1" value="その2">
-		<span style="border-bottom:dotted 3px #89abc6;">グループワーク</span><br>
-		</li>
-		</ul>
+		<span style="border-bottom:dotted 3px #89abc6;"><c:out value="${data.subjectname }" />
+		<a href="#" onclick="document.a.subjectid.value='${data.subjectid }'; document,a.submit(); return false;">申し込む</a>
+　　</span>
+	</ul>
+		</c:if>
+
+
+</c:forEach>
 
 <input type="submit" value="決定"> <input type="submit" value="取り消し"> <br><br><br><a href="login.jsp">トップページへ</a>
-
 </form>
+
+<form name="a"action="G01Select" method="POST">
+<input type="hidden" name="subjectid" value="">
+</form>
+
 </body>
 </html>

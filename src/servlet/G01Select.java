@@ -60,7 +60,7 @@ public class G01Select extends HttpServlet {
 		Student student = (Student)session.getAttribute("CLU");
 		
 		
-
+	
 
 		Register reg = new Register();
 		
@@ -73,7 +73,7 @@ public class G01Select extends HttpServlet {
 		reg.setSubjectid(subjectid);
 
 		// sessionに情報格納
-		session.setAttribute("G01Confirm", reg);
+		session.setAttribute("regdata", reg);
 
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/S/Studentconfirm.jsp");
 		rd.forward(request, response);
