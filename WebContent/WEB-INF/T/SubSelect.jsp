@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>教科選択画面</title>
 </head>
 <body>
 	<form action="<%=request.getContextPath()%>/SubSelect"
@@ -17,7 +17,7 @@
 			</select>
 		</p>
 
-		<input type="submit" value="登録">
+		<input type="submit" value="選択">
 	</form>
 </body>
 </html>
