@@ -10,6 +10,6 @@
 </head>
 <body>
 登録完了しました。
-<a href="Managerlogin.jsp">トップへ戻る</a>
+<a href="SubRegiConp">トップへ戻る</a>
 </body>
 </html>
