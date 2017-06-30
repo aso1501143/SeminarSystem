@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<h1>登録確認</h1>
+<center>
 	<form action="G01Confirm" method="POST">
 		<table>
 			<tr>
@@ -24,11 +26,17 @@
 			</tr>
 		</table>
 		<p>
-			<input type="submit" value="OK!!">
+			<button type="button" class="btn btn-primary">
+			<span class="glyphicon glyphicon-ok-sign"></span>OK!
+		</button>
 		</p>
 	</form>
 	<p>
 		<a href="G01Select">変更</a> <a href="XXTop">TOP!!</a>
 	</p>
+	</center>
+		<a href="G01Select">変更</a><br> 
+		<a href="/WEB-INF/S/StudentTop.jsp">TOP!!</a>
+	
 </body>
 </html>

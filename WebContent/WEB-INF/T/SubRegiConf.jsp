@@ -11,24 +11,30 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<form action="T01ZemiRegister" method="POST">
-		<table>
-			<tr>
-				<th>教科</th>
-				<td><c:out value="${T01ZemiRegister.subjectcf}" /></td>
-			</tr>
+	<h1>登録確認</h1>
+	<center>
+		<form action="T01ZemiRegister" method="POST">
+			<table>
+				<tr>
+					<th>教科</th>
+					<td><c:out value="${T01ZemiRegister.subjectcf}" /></td>
+				</tr>
 
-			<tr>
-				<th>科目名</th>
-				<td><c:out value="${T01ZemiRegister.subjectname}" /></td>
-			</tr>
-		</table>
-		<p>
-			<input type="submit" value="OK!!">
-		</p>
-	</form>
+				<tr>
+					<th>科目名</th>
+					<td><c:out value="${T01ZemiRegister.subjectname}" /></td>
+				</tr>
+			</table>
+			<p>
+				<button type="button" class="btn btn-primary">
+					<span class="glyphicon glyphicon-ok-sign"></span>OK!
+				</button>
+			</p>
+		</form>
+	</center>
 	<p>
-		<a href="T01ZemiRegister">変更</a> <a href="Managerlogin.jsp">TOP!!</a>
+		<a href="T01ZemiRegister">変更</a><br>
+	    <a href="Managerlogin.jsp">TOP!!</a>
 	</p>
 </body>
 </html>
