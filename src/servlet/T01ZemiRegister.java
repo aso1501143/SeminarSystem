@@ -46,7 +46,6 @@ public class T01ZemiRegister extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 
-
 		HttpSession session = request.getSession(false);
 
 		Semi regidata = (Semi)session.getAttribute("T01ZemiRegister");

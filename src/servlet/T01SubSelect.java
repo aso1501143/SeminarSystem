@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.RegisterDao;
-import model.Register;
+import model.Student;
 
 /**
  * Servlet implementation class T01SubSelect
@@ -35,6 +35,22 @@ public class T01SubSelect extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
+		HttpSession session = request.getSession();
+
+		Student student = (Student)session.getAttribute("");
+
+		int studentid =student.getStudentid();
+
+		RegisterDao regdao = new RegisterDao();
+
+
+		request.setAttribute("arry", regdao.getData(studentid));
+
+
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
+		rd.forward(request, response);
+
+
 	}
 
 	/**
@@ -45,25 +61,6 @@ public class T01SubSelect extends HttpServlet {
 		//doGet(request, response);
 
 
-		HttpSession session = request.getSession();
-
-		request.setCharacterEncoding("UTF-8");
-		int studentid;
-		String studentname = "";
-		String subjectcf = request.getParameter("subjectcf");
-
-	//	regiSemi.setSubjectcf(subjectcf);
-
-
-
-		RegisterDao RegisterDao = new RegisterDao();
-		Register Register = new Register();
-
-		//Register = RegisterDao.getUser(studentid, studentname);
-
-
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
-		rd.forward(request, response);
 
 	}
 
