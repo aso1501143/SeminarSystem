@@ -10,6 +10,6 @@
 </head>
 <body>
 登録完了しました。
-<a href="/WEB-INF/S/Studenttop.jsp">トップへ戻る</a>
+<a href="XXtop">トップへ戻る</a>
 </body>
 </html>

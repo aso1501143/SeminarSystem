@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class SubRegiConp
  */
-@WebServlet("/SubRegiConp")
-public class SubRegiConp extends HttpServlet {
+@WebServlet("/XXTop")
+public class XXTop extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SubRegiConp() {
+    public XXTop() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,6 +30,9 @@ public class SubRegiConp extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/S/StudentTop.jsp");
+		rd.forward(request, response);
+		
 	}
 
 	/**

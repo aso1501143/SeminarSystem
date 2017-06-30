@@ -28,7 +28,7 @@
 		</p>
 	</form>
 	<p>
-		<a href="G01Select">変更</a> <a href="/WEB-INF/S/StudentTop.jsp">TOP!!</a>
+		<a href="G01Select">変更</a> <a href="XXTop">TOP!!</a>
 	</p>
 </body>
 </html>

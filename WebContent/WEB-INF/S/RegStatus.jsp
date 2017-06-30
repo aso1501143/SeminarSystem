@@ -48,7 +48,7 @@
 			<span class="glyphicon glyphicon-remove-sign"></span>削除
 		</button>
 		</center>
-		<br> <a href="login.jsp">トップページへ</a>
+		<br> <a href="XXTop">トップページへ</a>
 
 	</form>
 
