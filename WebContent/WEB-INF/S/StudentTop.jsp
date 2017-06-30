@@ -16,7 +16,7 @@
 <br><br><br>
 
 
-<a href="G01Change">受講内容の確認・変更</a>
+<a href="G01Sure">受講内容の確認・変更</a>
 
 
 

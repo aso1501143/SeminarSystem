@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ゼミ科目の申込</title>
+<link rel="stylesheet" href="bootstrap-3.3.7/css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <form>
@@ -57,7 +59,7 @@
 
 </c:forEach>
 
-<input type="submit" value="決定"> <input type="submit" value="取り消し"> <br><br><br><a href="login.jsp">トップページへ</a>
+
 </form>
 
 <form name="a"action="G01Select" method="POST">

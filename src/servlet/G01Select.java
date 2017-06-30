@@ -58,9 +58,6 @@ public class G01Select extends HttpServlet {
 		HttpSession session = request.getSession(false);
 		
 		Student student = (Student)session.getAttribute("CLU");
-		
-		
-	
 
 		Register reg = new Register();
 		
