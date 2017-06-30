@@ -22,12 +22,12 @@
 				</select>
 			</p>
 			科目名:
-			<input type="text" name="subjectname"> <br> 
-			<button type="button" class="btn btn-primary">
+			<input type="text" name="subjectname"> <br>
+			<button type="submit" class="btn btn-primary">
 			<span class="glyphicon glyphicon-ok-sign"></span>決定
 		</button>
 
-			<button type="button" class="btn btn-primary">
+			<button type="reset" class="btn btn-primary">
 			<span class="glyphicon glyphicon-remove-sign"></span>リセット
 		</button>
 		</form>

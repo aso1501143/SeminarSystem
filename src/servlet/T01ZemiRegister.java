@@ -35,7 +35,7 @@ public class T01ZemiRegister extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/SubRegi.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/T/SubRegi.jsp");
 		rd.forward(request, response);
 	}
 
