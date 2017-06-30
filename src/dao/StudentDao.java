@@ -3,9 +3,11 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
+
 
 import model.Student;
 
@@ -72,12 +74,8 @@ public class StudentDao {
 		return st;
 	}
 
-	//受講科目申込
-	public void insertData(){
+	//受講科目確認
 
-	}
-
-
-	}
+}
 
 

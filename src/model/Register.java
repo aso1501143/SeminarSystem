@@ -6,6 +6,7 @@ public class Register implements Serializable {
 	private int regid;
 	private int studentid;
 	private int subjectid;
+	private String subjectname;
 	
 	//デフォルトコンストラクタ
 	public Register(){}
@@ -35,6 +36,17 @@ public class Register implements Serializable {
 	public void setSubjectid(int subjectid) {
 		this.subjectid = subjectid;
 	}
+
+
+	public String getSubjectname() {
+		return subjectname;
+	}
+
+
+	public void setSubjectname(String subjectname) {
+		this.subjectname = subjectname;
+	}
+	
 	
 	
 

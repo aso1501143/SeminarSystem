@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,24 +31,14 @@
 		<center>
 		<table border="1" class="table-design-set-1">
 			<tr>
-				<th>科目の確認</th>
-				<th>日付</th>
+				<th>科目の確認</th>	
 			</tr>
+		<c:forEach var="data" items="${requestScope.array}" varStatus="status">
 			<tr align="center">
 			<tr>
-				<td></td>
-				<td></td>
+				<td><c:out value="${data.subjectname}" /></td>
 			</tr>
-			<tr align="center">
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
+			</c:forEach>
 		</table>
 
 			<button type="button" class="btn btn-primary">

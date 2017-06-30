@@ -4,6 +4,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
@@ -96,6 +97,35 @@ public class RegisterDao {
 			}
 		}
 		return st;
+	}
+	
+	public ArrayList<Register> getData(int studentid){
+		//▼▼List (大きさが決まっていない配列のようなもの) 、メッセージ格納用変数　準備
+
+		ArrayList<Register> list = new ArrayList<Register>();
+		
+		try{
+			
+		//DB接続
+			connection();
+			
+		//SQL文設定の準備・SQL文の実行
+			String sql = "SELECT register.studentid,register.subjectid,semi.subjectname "
+					+ "FROM register RIGHT OUTER JOIN semi "
+					+ "ON register.subjectid = semi.subjectid WHERE studentid = ?;";
+			stmt = con.prepareStatement(sql); //sql文をプリコンパイルした状態で保持
+			stmt.setInt(1, studentid);
+			rs = stmt.executeQuery();//sql文を実行
+			
+			while(rs.next()){
+				Register rg = new Register();
+				rg.setSubjectname(rs.getString("subjectname"));
+				list.add(rg);
+			}
+		}catch (Exception e){
+		}
+		return list;
+		
 	}
 
 }
