@@ -25,7 +25,7 @@
 			</select>
 		</p>
 
-		<button type="button" class="btn btn-primary">
+		<button type="submit" class="btn btn-primary">
 		<span class="glyphicon glyphicon-ok-sign"></span>選択
 	</button>
 
