@@ -52,7 +52,7 @@ public class G01Confirm extends HttpServlet {
 
 		session.setAttribute("regisemi", Reg);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/S/Regsuccess.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/S/Regsucces.jsp");
 		rd.forward(request, response);
 
 	}

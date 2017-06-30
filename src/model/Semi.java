@@ -7,7 +7,19 @@ public class Semi implements Serializable {
 	private int subjectid;
 	private String subjectname = "";
 	private String subjectcf = "";
+	private String studentname = "";
+	private int Studentid;
 	
+	public int getStudentid() {
+		return Studentid;
+	}
+
+
+	public void setStudentid(int studentid) {
+		Studentid = studentid;
+	}
+
+
 	//デフォルトコンストラクタ
 	public Semi(){}
 
@@ -36,6 +48,18 @@ public class Semi implements Serializable {
 	public void setSubjectcf(String subjectcf) {
 		this.subjectcf = subjectcf;
 	}
+
+
+	public String getStudentname() {
+		return studentname;
+	}
+
+
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	
+	
 	
 	
 

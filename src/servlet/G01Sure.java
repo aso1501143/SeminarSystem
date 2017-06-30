@@ -44,10 +44,7 @@ public class G01Sure extends HttpServlet {
 
 
 		RegisterDao regdao = new RegisterDao();
-		
 		request.setAttribute("array", regdao.getData(studentid));
-
-
 
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/S/RegStatus.jsp");
 		rd.forward(request, response);

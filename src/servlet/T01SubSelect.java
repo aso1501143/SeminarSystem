@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.RegisterDao;
+import dao.SemiDao;
 import model.Register;
+import model.Semi;
+import model.Student;
 
 /**
  * Servlet implementation class T01SubSelect
@@ -34,6 +37,15 @@ public class T01SubSelect extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		SemiDao semidao = new SemiDao();
+
+		request.setAttribute("semi", semidao.getData());
+
+		RequestDispatcher  rd =
+				request.getRequestDispatcher("WEB-INF/T/SubSelect.jsp");
+		rd.forward(request, response);
+
+
 
 	}
 
@@ -43,27 +55,22 @@ public class T01SubSelect extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-
-
+		
 		HttpSession session = request.getSession();
-
-		request.setCharacterEncoding("UTF-8");
-		int studentid;
-		String studentname = "";
-		String subjectcf = request.getParameter("subjectcf");
-
-	//	regiSemi.setSubjectcf(subjectcf);
-
-
-
-		RegisterDao RegisterDao = new RegisterDao();
-		Register Register = new Register();
-
-		//Register = RegisterDao.getUser(studentid, studentname);
-
-
-		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/StudentsList.jsp");
+		
+		int subjectid = Integer.parseInt(request.getParameter("subjectid"));
+		
+		//DAOの実行
+		SemiDao semidao = new SemiDao();
+		request.setAttribute("array", semidao.getData1(subjectid));
+		
+		
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/T/StudentsList.jsp");
 		rd.forward(request, response);
+
+
+
+	
 
 	}
 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,73 +12,29 @@
 <body>
 
 	<h1>受講生徒一覧</h1>
-	<center>
-		科目名：IT
 
+		<center>
+		<c:forEach var="data" items="${requestScope.array}" varStatus="status">
+			科目名：<c:out value="${ data.subjectname }"></c:out>
+		</c:forEach>
+			<table border="1" class="table-design-set-1">
+	
+				<tr>
+					<th>学生ID</th>
+					<th>氏名</th>
+				</tr>
+				<tr align="center">
+				<c:forEach var="data" items="${requestScope.array}" varStatus="status">
+				<tr>
+					<td><c:out value="${data.studentid }" /></td>
+					<td><c:out value="${data.studentname }" /></td>
+				</tr>
+				</c:forEach>
+			</table>
+			<button type="button" class="btn btn-primary" onclick="window.print();">
+				<span class="glyphicon glyphicon-print"></span>印刷
+			</button>
 
-		<table border="1" class="table-design-set-1">
-			<tr>
-				<th>／</th>
-				<th>学生ID</th>
-				<th>氏名</th>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>1</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>2</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>3</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>4</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>5</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>・・・</td>
-				<td>・・・</td>
-				<td>・・・</td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>・・・</td>
-				<td>・・・</td>
-				<td>・・・</td>
-			</tr>
-			<tr align="center">
-			<tr>
-				<td>・・・</td>
-				<td>・・・</td>
-				<td>・・・</td>
-			</tr>
-
-		</table>
-
-
-		<button type="button" class="btn btn-primary">
-			<span class="glyphicon glyphicon-print"></span>印刷
-		</button>
-
-	</center>
-
+		</center>
 </body>
 </html>

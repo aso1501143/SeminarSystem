@@ -14,7 +14,7 @@
 <br><br><br>
 
 
-<a href="T01SL_confirmation">受講生徒一覧表</a>
+<a href="T01SubSelect">受講生徒一覧表</a>
 
 
 

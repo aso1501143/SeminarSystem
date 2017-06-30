@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jsp/common.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,21 +16,12 @@
 <body>
 <h1>選択</h1>
 <center>
-	<form action="<%=request.getContextPath()%>/SubSelect"
-		method="POST">
-		<p>
-			教科： <select name="subjectcf">
-				<option value="I">IT</option>
-				<option value="C">コミュニケーション</option>
-				<option value="E">英語</option>
-			</select>
-		</p>
-
-		<button type="submit" class="btn btn-primary">
-		<span class="glyphicon glyphicon-ok-sign"></span>選択
-	</button>
-
-	</form>
+	<c:forEach var="data" items="${requestScope.semi}" varStatus="status">
+	<a href="#" onclick="document.a.subjectid.value='${data.subjectid }'; document,a.submit(); return false;"><c:out value="${data.subjectname }"/></a>
+	</c:forEach>
+	<form name="a"action="T01SubSelect" method="POST">
+<input type="hidden" name="subjectid" value="">
+</form>
 	</center>
 </body>
 </html>

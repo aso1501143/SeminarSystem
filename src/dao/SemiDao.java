@@ -93,6 +93,36 @@ public class SemiDao {
 			return list;
 			
 		}
+		
+		public ArrayList<Semi> getData1(int subjectid){
+			  //▼▼List (大きさが決まっていない配列のようなもの) 、メッセージ格納用変数　準備
 
+			  ArrayList<Semi> list = new ArrayList<Semi>();
+			  
+			  try{
+			    
+			  //DB接続
+			    connection();
+			    
+			  //SQL文設定の準備・SQL文の実行
+			    String sql = "SELECT semi.subjectid,student.studentname,student.studentid,semi.subjectname FROM semi RIGHT OUTER JOIN register "
+			        + "ON semi.subjectid = register.subjectid RIGHT OUTER JOIN student "
+			        + "ON student.studentid = register.studentid WHERE semi.subjectid = ?;";
+			    stmt = con.prepareStatement(sql); //sql文をプリコンパイルした状態で保持
+			    stmt.setInt(1, subjectid);
+			    rs = stmt.executeQuery();//sql文を実行
+			    
+			    while(rs.next()){
+			      Semi sm = new Semi();
+			      sm.setStudentid(rs.getInt("studentid"));
+			      sm.setStudentname(rs.getString("studentname"));
+			      sm.setSubjectname(rs.getString("subjectname"));
+			      list.add(sm);
+			    }
+			  }catch (Exception e){
+			  }
+			  return list;
+			  
+			}
 
 }

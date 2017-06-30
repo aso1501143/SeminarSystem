@@ -28,7 +28,7 @@
 		</p>
 	</form>
 	<p>
-		<a href="T01ZemiRegister">変更</a> <a href="Managerlogin.jsp">TOP!!</a>
+		<a href="G01Select">変更</a> <a href="/WEB-INF/S/StudentTop.jsp">TOP!!</a>
 	</p>
 </body>
 </html>
